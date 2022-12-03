@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="container mx-auto w-full flex justify-center">
       <Head>
-        <title>Became a Membership</title>
+        <title>Became a Member</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="my-5 grid grid-cols-12">
