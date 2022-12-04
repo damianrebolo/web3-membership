@@ -4,7 +4,7 @@ import { useCallback } from "react";
 import { useAddressNFTBalance } from "./useAddressNFTBalance";
 
 export const useNFTGetAccess = (tokenId: BigNumberish) => {
-  const { contract } = useContract("0xe21Bd82Ce2f1D4116B263910A12c906d42A10cfA", "edition-drop");
+  const { contract } = useContract(process.env.NEXT_PUBLIC_THIRD_ERC_1155_ADDRESS as string, "edition-drop");
   const address = useAddress();
 
   const { balance } = useAddressNFTBalance(tokenId);

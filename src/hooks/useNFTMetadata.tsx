@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 export const useNFTMetadata = (tokenId: string) => {
   const [nft, setNFT] = useState<NFT | null>(null);
-  const { contract } = useContract("0xe21Bd82Ce2f1D4116B263910A12c906d42A10cfA", "edition-drop");
+  const { contract } = useContract(process.env.NEXT_PUBLIC_THIRD_ERC_1155_ADDRESS as string, "edition-drop");
 
   useEffect(() => {
     if (!contract) return;
